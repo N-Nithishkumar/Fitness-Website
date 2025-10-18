@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Feedback Form</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #1e3c72, #2a5298, #e0e0e0);
+      background-size: 200% 200%;
+      animation: gradientMove 10s ease infinite;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #333;
+      position: relative;
+    }
+
+    @keyframes gradientMove {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .feedback-card {
+      background-color: rgba(255, 255, 255, 0.95);
+      padding: 30px;
+      border-radius: 16px;
+      width: 90%;
+      max-width: 700px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 25px;
+      color: #222;
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    label {
+      font-weight: 600;
+      margin-bottom: 6px;
+      display: block;
+      color: #222;
+    }
+
+    input[type="text"],
+    select,
+    textarea,
+    input[type="range"] {
+      width: 100%;
+      padding: 10px;
+      margin-top: 4px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 1rem;
+    }
+
+    .radio-group {
+      display: flex;
+      gap: 15px;
+      align-items: center;
+      margin-top: 8px;
+    }
+
+    .full-width {
+      grid-column: 1 / -1;
+    }
+
+    textarea {
+      resize: none;
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 20px;
+    }
+
+    button {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 6px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button[type="submit"] {
+      background-color: #28a745;
+      color: white;
+    }
+
+    button[type="submit"]:hover {
+      background-color: #218838;
+    }
+
+    button[type="reset"] {
+      background-color: #dc3545;
+      color: white;
+    }
+
+    button[type="reset"]:hover {
+      background-color: #c82333;
+    }
+
+    /* ✅ Floating Home Icon */
+    .home-icon {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      background-color: rgba(255, 255, 255, 0.85);
+      border-radius: 50%;
+      padding: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+      transition: transform 0.3s ease, background 0.3s ease;
+    }
+
+    .home-icon img {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      display: block;
+    }
+
+    .home-icon:hover {
+      transform: scale(1.15);
+      background-color: rgba(255, 255, 255, 1);
+    }
+
+    @media (max-width: 650px) {
+      .form-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .buttons {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      button {
+        width: 100%;
+      }
+
+      .home-icon {
+        top: 15px;
+        left: 15px;
+        padding: 6px;
+      }
+
+      .home-icon img {
+        width: 30px;
+        height: 30px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 🏠 Floating Home Icon -->
+  <a href="home.html" class="home-icon" title="Go to Home">
+    <img src="./picsss/homee.webp" alt="Home Icon">
+  </a>
+
+  <form class="feedback-card">
+    <h1>Feedback Form</h1>
+
+    <div class="form-grid">
+
+      <div>
+        <label for="name">Full Name</label>
+        <input type="text" id="name" placeholder="Your name">
+      </div>
+
+      <div>
+        <label for="email">Email</label>
+        <input type="text" id="email" placeholder="your@email.com">
+      </div>
+
+      <div class="full-width">
+        <label>Gender</label>
+        <div class="radio-group">
+          <label><input type="radio" name="gender" value="male"> Male</label>
+          <label><input type="radio" name="gender" value="female"> Female</label>
+          <label><input type="radio" name="gender" value="other"> Other</label>
+        </div>
+      </div>
+
+      <div>
+        <label for="xp">Experience Level</label>
+        <select id="xp">
+          <option value="beginner">Beginner</option>
+          <option value="intermediate">Intermediate</option>
+          <option value="expert">Expert</option>
+        </select>
+      </div>
+
+      <div>
+        <label for="satisfaction">Satisfaction (1 to 10)</label>
+        <input type="range" id="satisfaction" min="1" max="10">
+      </div>
+
+      <div class="full-width">
+        <label for="comments">Additional Comments</label>
+        <textarea id="comments" rows="4" placeholder="Write something..."></textarea>
+      </div>
+
+    </div>
+
+    <div class="buttons">
+      <button type="submit">Submit Feedback</button>
+      <button type="reset">Reset</button>
+    </div>
+  </form>
+
+</body>
+</html>
