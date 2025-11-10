@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Muscle Building Food List</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body{
+      font-family: 'Poppins', sans-serif;
+      background-color: #111;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
+      position: relative;
+    }
+
+    .container{
+      text-align: center;
+      max-width: 1200px;
+      width: 100%;
+    }
+
+    h1{
+      font-size: 2rem;
+      margin-bottom: 30px;
+      letter-spacing: 2px;
+    }
+
+    .highlight{
+      color: #ff3c00;
+      font-weight: bold;
+    }
+
+    .columns{
+      display: flex;
+      justify-content: center;
+      align-items: stretch;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .column{
+      background-color: #222;
+      flex: 1 1 300px;
+      max-width: 350px;
+      border-radius: 15px;
+      padding: 20px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .column:hover{
+      transform: translateY(-8px);
+      box-shadow: 0 10px 25px rgba(255, 60, 0, 0.3);
+    }
+
+    .column h2{
+      color: #ff3c00;
+      border-bottom: 2px solid #ff3c00;
+      padding-bottom: 10px;
+      margin-bottom: 20px;
+      font-size: 1.5rem;
+    }
+
+    .column ul{
+      list-style: none;
+    }
+
+    .column ul li{
+      padding: 10px 0;
+      font-size: 1.1rem;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+      transition: color 0.3s;
+    }
+
+    .column ul li:last-child{
+      border-bottom: none;
+    }
+
+    .column ul li:hover{
+      color: #ff3c00;
+    }
+
+    /* Diet icon */
+    .diet-icon {
+      position: absolute;
+      top: 20px;
+      right: 25px;
+      width: 40px;
+      height: 40px;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+
+    .diet-icon:hover {
+      transform: scale(1.2);
+    }
+
+    @media (max-width: 768px){
+      h1{
+        font-size: 1.7rem;
+      }
+
+      .columns{
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .column{
+        width: 90%;
+        max-width: 400px;
+      }
+
+      .diet-icon {
+        width: 35px;
+        height: 35px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <a href="diet.html"><img src="./picsss/homee.webp" alt="Diet Icon" class="diet-icon"></a>
+
+  <div class="container">
+    <h1><span class="highlight">MUSCLE BUILDING</span> FOOD LIST</h1>
+
+    <div class="columns">
+      <div class="column">
+        <h2>PROTEINS</h2>
+        <ul>
+          <li>Chicken</li>
+          <li>Turkey</li>
+          <li>Beef</li>
+          <li>Steak</li>
+          <li>Whey</li>
+          <li>Eggs</li>
+          <li>Fish</li>
+          <li>Greek Yogurt</li>
+        </ul>
+      </div>
+
+      <div class="column">
+        <h2>CARBS</h2>
+        <ul>
+          <li>White Rice</li>
+          <li>Brown Rice</li>
+          <li>Potatoes</li>
+          <li>Pasta</li>
+          <li>Oats</li>
+          <li>Fruit</li>
+          <li>Quinoa</li>
+          <li>Sorbet</li>
+        </ul>
+      </div>
+
+      <div class="column">
+        <h2>FATS</h2>
+        <ul>
+          <li>Nut Butter</li>
+          <li>Nuts</li>
+          <li>Avocado</li>
+          <li>Cheese</li>
+          <li>Olive Oil</li>
+          <li>Flax</li>
+          <li>Coconut Oil</li>
+          <li>Cake</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
