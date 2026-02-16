@@ -1,6 +1,6 @@
 🏋️‍♂️ Max Fitness Website
 
-Max Fitness is a responsive and modern fitness website designed to promote a healthy lifestyle. The platform provides users with workout guidance, fitness motivation, and an engaging user interface for an enhanced fitness experience.
+Max Fitness is a responsive and modern fitness website designed to promote a healthy lifestyle. The platform provides users with workout guidance, fitness motivation, and an engaging user interface for an enhanced fitness experience...
 
 🚀 Features
 
@@ -69,5 +69,6 @@ Workout Tracker
 Backend Integration
 
 AI-based Fitness Suggestions
+
 
 
