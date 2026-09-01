@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<!-- saved from url=(0035)http://127.0.0.1:5500/exercise.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <title>Hall of Fame Certificate</title>
+  <style>
+    body {
+      background: #1a1a1a;
+      font-family: 'Georgia', serif;
+      color: white;
+      padding: 40px;
+    }
+
+    .certificate {
+      border: 10px solid #d1b918;
+      border-radius: 30px;
+      padding: 50px;
+      background-color: #2a2a2a;
+      max-width: 800px;
+      margin: auto;
+      text-align: center;
+      box-shadow: 0 0 30px #ff3c00;
+    }
+
+    .certificate h1 {
+      font-size: 48px;
+      margin-bottom: 10px;
+      color: #ff3c00;
+    }
+
+    .certificate h2 {
+      font-size: 28px;
+      margin-top: 10px;
+      color: #d1b918;
+    }
+
+    .certificate p {
+      font-size: 20px;
+      margin: 20px 0;
+    }
+
+    .name {
+      font-size: 36px;
+      font-weight: bold;
+      color: #ffffff;
+      text-decoration: underline;
+    }
+
+    .footer {
+      margin-top: 50px;
+      display: flex;
+      justify-content: space-between;
+      padding: 0 40px;
+      font-size: 16px;
+      color: #ccc;
+    }
+
+    .logo {
+      font-weight: bold;
+      color: #d1b918;
+    }
+  </style>
+</head>
+<body>
+  <div class="certificate">
+    <h1>🏅 Hall of Fame</h1>
+    <h2>Certificate of Championship</h2>
+    <p>This certificate is proudly presented to</p>
+    
+    <div class="name">YOU ARE A CHAMPION</div>
+    
+    <p>In recognition of your outstanding dedication, perseverance,<br>
+    and achievements in fitness and personal transformation.</p>
+
+    <p style="margin-top: 30px;">Awarded by</p>
+    <h2 class="logo">MAX FITNESS TRACKING</h2>
+
+    <div class="footer">
+      <div>Date: _____________</div>
+      <div>Signature: _____________</div>
+    </div>
+  </div>
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+
+</body></html>

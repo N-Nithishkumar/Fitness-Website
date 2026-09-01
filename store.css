@@ -1,0 +1,191 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #111;
+  color: #fff;
+  line-height: 1.6;
+  position: relative;
+}
+
+header {
+  text-align: center;
+  padding: 25px 10px;
+  background: linear-gradient(90deg, #ff3c00, #c5b504);
+  color: #111;
+  font-size: 28px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+main {
+  padding: 30px 10%;
+}
+
+h2 {
+  color: #c5b504;
+  text-align: center;
+  margin: 40px 0 20px;
+  font-size: 26px;
+  letter-spacing: 1px;
+}
+
+.products {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+  justify-items: center;
+}
+
+
+.product {
+  background-color: #1e1e1e;
+  border-radius: 15px;
+  padding: 20px;
+  width: 100%;
+  max-width: 280px;
+  text-align: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px rgba(255, 60, 0, 0.2);
+}
+
+.product:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 20px rgba(255, 60, 0, 0.4);
+}
+
+.product img {
+  width: 160px;
+  height: 160px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  transition: transform 0.3s ease;
+}
+
+.product img:hover {
+  transform: scale(1.1);
+}
+
+.product h3 {
+  color: #ff3c00;
+  margin: 10px 0 5px;
+  font-size: 18px;
+}
+
+.product p {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+
+.addcrt {
+  background-color: #ff3c00;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.addcrt:hover {
+  background-color: #d1b918;
+}
+
+#cartt {
+  background-color: #1a1a1a;
+  text-align: center;
+  color: white;
+  width: 100%;
+  max-width: 450px;
+  margin: 50px auto;
+  border-radius: 10px;
+  padding: 25px;
+  box-shadow: 0 0 15px rgba(255, 60, 0, 0.3);
+}
+
+#cart-items {
+  margin: 15px 0;
+  font-size: 15px;
+  line-height: 1.4;
+}
+
+.buynowbt {
+  background-color: #ff3c00;
+  border: none;
+  color: #fff;
+  border-radius: 20px;
+  padding: 10px 25px;
+  cursor: pointer;
+  font-size: 15px;
+  transition: 0.3s;
+}
+
+.buynowbt:hover {
+  background-color: #c5b504;
+  color: #111;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #000;
+  color: #ff3c00;
+  font-size: 14px;
+  margin-top: 50px;
+}
+
+.home-icon {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 50%;
+  padding: 6px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease, background 0.3s ease;
+  z-index: 100;
+}
+
+.home-icon img {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+}
+
+.home-icon:hover {
+  transform: scale(1.15);
+  background-color: #fff;
+}
+
+@media (max-width: 768px) {
+  main {
+    padding: 20px;
+  }
+
+  header {
+    font-size: 22px;
+  }
+
+  .product img {
+    width: 130px;
+    height: 130px;
+  }
+
+  .home-icon {
+    top: 15px;
+    left: 15px;
+    padding: 5px;
+  }
+
+  .home-icon img {
+    width: 30px;
+    height: 30px;
+  }
+}

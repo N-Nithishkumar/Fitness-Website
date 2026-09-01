@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MAX FITNESS STORE</title>
+
+  <link rel="stylesheet" href="store.css">
+</head>
+
+<body>
+
+  <a href="home.html" class="home-icon" title="Go to Homepage">
+    <img src="./picsss/homee.webp" alt="Home Icon">
+  </a>
+
+  <header> MAX FITNESS STORE </header>
+
+  <main>
+
+    <section>
+      <h2>Proteins</h2>
+      <div class="products">
+
+        <div class="product">
+          <img src="./picsss/wheyyy.gif" alt="Whey Protein">
+          <h3>Whey Protein</h3>
+          <p>₹2,499</p>
+          <button class="addcrt" onclick="addToCart('Whey Protein', 2499)">Add to Cart</button>
+        </div>
+
+        <div class="product">
+          <img src="./picsss/mass gainer.gif" alt="Mass Gainer">
+          <h3>Mass Gainer</h3>
+          <p>₹2,999</p>
+          <button class="addcrt" onclick="addToCart('Mass Gainer', 2999)">Add to Cart</button>
+        </div>
+
+        <div class="product">
+          <img src="./picsss/iso" alt="Isolate Protein">
+          <h3>Isolate Protein</h3>
+          <p>₹3,499</p>
+          <button class="addcrt" onclick="addToCart('Isolate Protein', 3499)">Add to Cart</button>
+        </div>
+
+      </div>
+    </section>
+
+    <section>
+      <h2>Pre-Workouts</h2>
+      <div class="products">
+
+        <div class="product">
+          <img src="./picsss/createmon" alt="Creatine Monohydrate">
+          <h3>Creatine Monohydrate</h3>
+          <p>₹1,499</p>
+          <button class="addcrt" onclick="addToCart('Creatine Monohydrate', 1499)">Add to Cart</button>
+        </div>
+
+        <div class="product">
+          <img src="./picsss/bcaa" alt="BCAA Powder">
+          <h3>BCAA Powder</h3>
+          <p>₹1,999</p>
+          <button class="addcrt" onclick="addToCart('BCAA Powder', 1999)">Add to Cart</button>
+        </div>
+
+        <div class="product">
+          <img src="./picsss/prework" alt="Pre Workout">
+          <h3>Pre-Workout Energy</h3>
+          <p>₹2,199</p>
+          <button class="addcrt" onclick="addToCart('Pre-Workout Energy', 2199)">Add to Cart</button>
+        </div>
+
+      </div>
+    </section>
+
+    <section>
+      <h2>Nutrition & Vitamins</h2>
+      <div class="products">
+
+        <div class="product">
+          <img src="./picsss/multivitamins.jpg" alt="Multivitamins">
+          <h3>Multivitamin Tablets</h3>
+          <p>₹899</p>
+          <button class="addcrt" onclick="addToCart('Multivitamin Tablets', 899)">Add to Cart</button>
+        </div>
+
+        <div class="product">
+          <img src="./picsss/omega3.jpg" alt="Omega 3">
+          <h3>Omega 3 Capsules</h3>
+          <p>₹1,199</p>
+          <button class="addcrt" onclick="addToCart('Omega 3 Capsules', 1199)">Add to Cart</button>
+        </div>
+
+        <div class="product">
+          <img src="./picsss/d3-k2.jpg" alt="Vitamin D3">
+          <h3>Vitamin D3 + K2</h3>
+          <p>₹999</p>
+          <button class="addcrt" onclick="addToCart('Vitamin D3 + K2', 999)">Add to Cart</button>
+        </div>
+
+      </div>
+    </section>
+
+    <div id="cartt">
+      <h2>🧾 Cart Summary</h2>
+      <div id="cart-items">No items yet.</div>
+      <h3>Total: ₹<span id="cart-total">0</span></h3>
+      <button class="buynowbt">BUY NOW</button>
+    </div>
+
+  </main>
+
+  <footer>
+    &copy; 2015 - 2025 MAX Fitness Store | All Rights Reserved
+  </footer>
+
+  <script src="store.js"></script>
+
+</body>
+</html>
