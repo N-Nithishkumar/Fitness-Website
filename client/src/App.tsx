@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import { Home as HomeIcon, User, ShoppingBag, PieChart } from 'lucide-react';
 import './index.css';
 
