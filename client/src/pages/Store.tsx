@@ -2,13 +2,15 @@ import { useState } from 'react';
 import { ShoppingCart, Heart, Search } from 'lucide-react';
 import { useGlobalState } from '../context/GlobalState';
 
+const getImg = (name: string) => import.meta.env.BASE_URL + 'picsss/' + name;
+
 const products = [
-  { id: 1, name: 'Whey Protein', price: 2499, category: 'Protein', image: 'picsss/wheyyy.gif' },
-  { id: 2, name: 'Mass Gainer', price: 2999, category: 'Protein', image: 'picsss/mass gainer.gif' },
-  { id: 3, name: 'Creatine Monohydrate', price: 1499, category: 'Pre-Workout', image: 'picsss/createmon.jpg' },
-  { id: 4, name: 'Pre-Workout Energy', price: 2199, category: 'Pre-Workout', image: 'picsss/prework.jpg' },
-  { id: 5, name: 'Multivitamin Tablets', price: 899, category: 'Vitamins', image: 'picsss/multivitamins.jpg' },
-  { id: 6, name: 'Omega 3 Capsules', price: 1199, category: 'Vitamins', image: 'picsss/omega3.jpg' }
+  { id: 1, name: 'Whey Protein', price: 2499, category: 'Protein', image: getImg('wheyyy.gif') },
+  { id: 2, name: 'Mass Gainer', price: 2999, category: 'Protein', image: getImg('mass gainer.gif') },
+  { id: 3, name: 'Creatine Monohydrate', price: 1499, category: 'Pre-Workout', image: getImg('createmon.jpg') },
+  { id: 4, name: 'Pre-Workout Energy', price: 2199, category: 'Pre-Workout', image: getImg('prework.jpg') },
+  { id: 5, name: 'Multivitamin Tablets', price: 899, category: 'Vitamins', image: getImg('multivitamins.jpg') },
+  { id: 6, name: 'Omega 3 Capsules', price: 1199, category: 'Vitamins', image: getImg('omega3.jpg') }
 ];
 
 const Store = () => {

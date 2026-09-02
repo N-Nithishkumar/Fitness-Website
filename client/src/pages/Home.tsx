@@ -25,7 +25,7 @@ const Home = () => {
           zIndex: 0
         }}
       >
-        <source src="picsss/videoplayback.webm" type="video/webm" />
+        <source src={`${import.meta.env.BASE_URL}picsss/videoplayback.webm`} type="video/webm" />
       </video>
       <div style={{
         position: 'absolute',
