@@ -10,11 +10,56 @@ const Nutrition = () => {
 
   const getNutritionData = () => {
     switch (goal) {
-      case 'bulking': return { cal: 3200, pro: 180, carb: 400, fat: 90 };
-      case 'weight_loss': return { cal: 1800, pro: 140, carb: 150, fat: 60 };
-      case 'cardio': return { cal: 2400, pro: 120, carb: 320, fat: 70 };
-      case 'strength': return { cal: 2800, pro: 170, carb: 300, fat: 85 };
-      default: return { cal: 2200, pro: 130, carb: 250, fat: 75 };
+      case 'bulking': return { 
+        cal: 3200, pro: 180, carb: 400, fat: 90,
+        meals: {
+          breakfast: { name: 'Peanut Butter Oats & 4 Whole Eggs', kcal: 650 },
+          lunch: { name: 'Beef Mince, Rice & Avocado', kcal: 850 },
+          pre: { natural: 'Banana & Honey Sandwich', supps: 'Pre-Workout & Rice Krispies', kcal: 250 },
+          post: { natural: 'Chicken Breast & White Rice', supps: 'Mass Gainer Shake', kcal: 400 },
+          dinner: { name: 'Salmon, Sweet Potato & Olive Oil', kcal: 1050 }
+        }
+      };
+      case 'weight_loss': return { 
+        cal: 1800, pro: 140, carb: 150, fat: 60,
+        meals: {
+          breakfast: { name: 'Egg Whites & Spinach Omelette', kcal: 300 },
+          lunch: { name: 'Grilled Chicken Salad with Vinaigrette', kcal: 450 },
+          pre: { natural: 'Black Coffee & Apple', supps: 'Fat Burner & BCAA', kcal: 100 },
+          post: { natural: 'Tuna & Rice Cakes', supps: 'Whey Protein Isolate (Water)', kcal: 250 },
+          dinner: { name: 'Lean Turkey & Roasted Zucchini', kcal: 700 }
+        }
+      };
+      case 'cardio': return { 
+        cal: 2400, pro: 120, carb: 320, fat: 70,
+        meals: {
+          breakfast: { name: 'Oatmeal with Berries & Honey', kcal: 450 },
+          lunch: { name: 'Whole Wheat Pasta & Turkey Meatballs', kcal: 600 },
+          pre: { natural: 'Dates & Beetroot Juice', supps: 'Electrolytes & Energy Gel', kcal: 150 },
+          post: { natural: 'Chocolate Milk & Banana', supps: 'Recovery Carb-Protein Mix', kcal: 350 },
+          dinner: { name: 'Quinoa, Tofu & Mixed Greens', kcal: 850 }
+        }
+      };
+      case 'strength': return { 
+        cal: 2800, pro: 170, carb: 300, fat: 85,
+        meals: {
+          breakfast: { name: 'Steak & Eggs with Sourdough Toast', kcal: 750 },
+          lunch: { name: 'Chicken Thighs & Roasted Potatoes', kcal: 700 },
+          pre: { natural: 'Oatmeal & Black Coffee', supps: 'High-Stim Pre-Workout & Carbs', kcal: 200 },
+          post: { natural: 'Lean Beef Patties & Rice', supps: 'Whey Isolate & Dextrose', kcal: 350 },
+          dinner: { name: 'Pork Chops, Asparagus & Butter', kcal: 800 }
+        }
+      };
+      default: return { 
+        cal: 2200, pro: 130, carb: 250, fat: 75,
+        meals: {
+          breakfast: { name: 'Scrambled Eggs & Toast', kcal: 450 },
+          lunch: { name: 'Chicken Breast, Rice & Broccoli', kcal: 550 },
+          pre: { natural: 'Black Coffee & Banana', supps: 'Pre-Workout Scoop & Banana', kcal: 150 },
+          post: { natural: 'Greek Yogurt & Almonds', supps: '1 Scoop Whey Protein', kcal: 250 },
+          dinner: { name: 'Grilled Fish & Salad', kcal: 800 }
+        }
+      };
     }
   };
 
@@ -104,45 +149,45 @@ const Nutrition = () => {
         <div className="glass-card" style={{ padding: '1.5rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
           <div>
             <h3 style={{ fontSize: '1.2rem', color: 'var(--primary)' }}>🌅 Breakfast</h3>
-            <p style={{ color: 'var(--muted)', marginTop: '0.3rem' }}>Oats + Banana + Eggs</p>
+            <p style={{ color: 'var(--muted)', marginTop: '0.3rem' }}>{macros.meals.breakfast.name}</p>
           </div>
-          <span style={{ fontSize: '1.2rem', fontWeight: 'bold' }}>520 kcal</span>
+          <span style={{ fontSize: '1.2rem', fontWeight: 'bold' }}>{macros.meals.breakfast.kcal} kcal</span>
         </div>
         
         <div className="glass-card" style={{ padding: '1.5rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
           <div>
             <h3 style={{ fontSize: '1.2rem', color: 'var(--primary)' }}>☀️ Lunch</h3>
-            <p style={{ color: 'var(--muted)', marginTop: '0.3rem' }}>Rice + Chicken + Vegetables</p>
+            <p style={{ color: 'var(--muted)', marginTop: '0.3rem' }}>{macros.meals.lunch.name}</p>
           </div>
-          <span style={{ fontSize: '1.2rem', fontWeight: 'bold' }}>680 kcal</span>
+          <span style={{ fontSize: '1.2rem', fontWeight: 'bold' }}>{macros.meals.lunch.kcal} kcal</span>
         </div>
 
         <div className="glass-card" style={{ padding: '1.5rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
           <div>
             <h3 style={{ fontSize: '1.2rem', color: 'var(--primary)' }}>🏋️ Pre Workout</h3>
             <p style={{ color: 'var(--muted)', marginTop: '0.3rem' }}>
-              {dietType === 'supplements' ? 'Pre-Workout Scoop + Banana' : 'Black Coffee + Banana'}
+              {dietType === 'supplements' ? macros.meals.pre.supps : macros.meals.pre.natural}
             </p>
           </div>
-          <span style={{ fontSize: '1.2rem', fontWeight: 'bold' }}>180 kcal</span>
+          <span style={{ fontSize: '1.2rem', fontWeight: 'bold' }}>{macros.meals.pre.kcal} kcal</span>
         </div>
 
         <div className="glass-card" style={{ padding: '1.5rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
           <div>
             <h3 style={{ fontSize: '1.2rem', color: 'var(--primary)' }}>💪 Post Workout</h3>
             <p style={{ color: 'var(--muted)', marginTop: '0.3rem' }}>
-              {dietType === 'supplements' ? '1 Scoop Whey Protein' : '5 Egg Whites + Apple'}
+              {dietType === 'supplements' ? macros.meals.post.supps : macros.meals.post.natural}
             </p>
           </div>
-          <span style={{ fontSize: '1.2rem', fontWeight: 'bold' }}>140 kcal</span>
+          <span style={{ fontSize: '1.2rem', fontWeight: 'bold' }}>{macros.meals.post.kcal} kcal</span>
         </div>
 
         <div className="glass-card" style={{ padding: '1.5rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
           <div>
             <h3 style={{ fontSize: '1.2rem', color: 'var(--primary)' }}>🌙 Dinner</h3>
-            <p style={{ color: 'var(--muted)', marginTop: '0.3rem' }}>Chicken + Roti + Salad</p>
+            <p style={{ color: 'var(--muted)', marginTop: '0.3rem' }}>{macros.meals.dinner.name}</p>
           </div>
-          <span style={{ fontSize: '1.2rem', fontWeight: 'bold' }}>620 kcal</span>
+          <span style={{ fontSize: '1.2rem', fontWeight: 'bold' }}>{macros.meals.dinner.kcal} kcal</span>
         </div>
       </div>
     </div>
